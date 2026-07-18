@@ -1,0 +1,100 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer base {
+  :root {
+    --color-brand-black: #070B0F;
+    --color-brand-navy: #0B1824;
+    --color-brand-slate: #172632;
+    --color-brand-offwhite: #F3F6F7;
+    --color-brand-grey: #9AA8B2;
+    --color-brand-cyan: #46D5E8;
+    --color-brand-gold: #E8B65A;
+  }
+
+  html {
+    scroll-behavior: smooth;
+  }
+
+  @media (prefers-reduced-motion: reduce) {
+    html {
+      scroll-behavior: auto;
+    }
+    *, *::before, *::after {
+      animation-duration: 0.01ms !important;
+      animation-iteration-count: 1 !important;
+      transition-duration: 0.01ms !important;
+    }
+  }
+
+  body {
+    overflow-x: hidden;
+  }
+
+  ::selection {
+    background-color: rgba(70, 213, 232, 0.3);
+    color: #F3F6F7;
+  }
+
+  /* Custom scrollbar for Webkit browsers */
+  ::-webkit-scrollbar {
+    width: 8px;
+  }
+  ::-webkit-scrollbar-track {
+    background: #070B0F;
+  }
+  ::-webkit-scrollbar-thumb {
+    background: #172632;
+    border-radius: 4px;
+  }
+  ::-webkit-scrollbar-thumb:hover {
+    background: #46D5E8;
+  }
+}
+
+@layer components {
+  .section-padding {
+    @apply px-5 sm:px-8 md:px-12 lg:px-16 xl:px-24;
+  }
+
+  .section-container {
+    @apply max-w-7xl mx-auto;
+  }
+
+  .text-gradient-cyan {
+    @apply bg-gradient-to-r from-brand-cyan to-cyan-300 bg-clip-text text-transparent;
+  }
+
+  .text-gradient-gold {
+    @apply bg-gradient-to-r from-brand-gold to-amber-300 bg-clip-text text-transparent;
+  }
+
+  .overlay-dark {
+    @apply absolute inset-0 bg-gradient-to-b from-brand-black/70 via-brand-black/50 to-brand-black/80;
+  }
+
+  .overlay-navy {
+    @apply absolute inset-0 bg-gradient-to-b from-brand-navy/80 via-brand-navy/60 to-brand-navy/90;
+  }
+
+  .card-hover {
+    @apply transition-all duration-500 ease-out hover:-translate-y-1 hover:shadow-2xl hover:shadow-brand-cyan/5;
+  }
+
+  .focus-ring {
+    @apply focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-brand-cyan focus-visible:ring-offset-2 focus-visible:ring-offset-brand-black;
+  }
+
+  .placeholder-tag {
+    @apply inline-flex items-center gap-1 px-2 py-0.5 text-xs font-medium rounded bg-brand-gold/20 text-brand-gold border border-brand-gold/30;
+  }
+}
+
+@layer utilities {
+  .animate-delay-100 { animation-delay: 100ms; }
+  .animate-delay-200 { animation-delay: 200ms; }
+  .animate-delay-300 { animation-delay: 300ms; }
+  .animate-delay-400 { animation-delay: 400ms; }
+  .animate-delay-500 { animation-delay: 500ms; }
+}

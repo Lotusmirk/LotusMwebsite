@@ -1,0 +1,4 @@
+User-agent: *
+Allow: /
+
+Sitemap: https://lotusmirk.github.io/LotusMwebsite/sitemap.xml
