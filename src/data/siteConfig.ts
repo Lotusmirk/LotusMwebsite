@@ -3,7 +3,7 @@
 export const siteConfig = {
   companyName: 'Lotusmirk Aerospace',
   shortName: 'Lotusmirk',
-  tagline: 'Intelligence from Above. Clarity on the Ground.',
+  tagline: 'Hello Gaurav',
   description:
     'Lotusmirk Aerospace delivers precision drone surveying, aerial inspection, UAV data processing and creative aerial content for infrastructure, energy, mining and agriculture across India.',
   url: 'https://lotusmirk.github.io/LotusMwebsite/',

@@ -43,8 +43,8 @@ export function Hero() {
             transition={{ duration: 0.8, delay: 0.4 }}
             className="font-display font-bold text-display-xl text-brand-offwhite mb-6"
           >
-            Intelligence from Above.{' '}
-            <span className="text-gradient-cyan">Clarity on the Ground.</span>
+            Hello{' '}
+            <span className="text-gradient-cyan">Gaurav</span>
           </motion.h1>
 
           <motion.p
